@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "preview": "vite preview",
     "format": "prettier -w src/**/*.{js,mjs}",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "lint": "eslint src/**/*.{js,mjs}",
+    "lint-fix": "eslint src/**/*.{js,mjs} --cache --fix"
   },
   "dependencies": {
     "react": "^18.3.1",
