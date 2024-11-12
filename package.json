@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "format": "prettier -w src/**/*.{js,mjs}",
     "lint": "eslint src/**/*.{js,mjs}",
-    "lint-fix": "eslint src/**/*.{js,mjs} --cache --fix"
+    "lint-fix": "eslint src/**/*.{js,mjs} --cache --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -30,5 +31,17 @@
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.14",
     "vite": "^5.4.10"
+  },
+  "lint-staged": {
+    "*.{js,mjs}": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
   }
 }
